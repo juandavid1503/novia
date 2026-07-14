@@ -14,6 +14,7 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             overflow-x: hidden;
+            background-color: #fdfbfb;
         }
 
         /* ===== SECCIÓN HERO ===== */
@@ -50,6 +51,7 @@
             z-index: 2;
             max-width: 800px;
             animation: fadeInDown 1.5s ease;
+            padding: 20px;
         }
 
         .hero h1 {
@@ -62,7 +64,7 @@
 
         .heart-big {
             display: inline-block;
-            font-size: 3em;
+            font-size: 1em;
             animation: heartBeat 1.5s ease-in-out infinite;
             margin: 0 15px;
         }
@@ -229,6 +231,7 @@
         .gallery-overlay-text {
             color: white;
             text-align: center;
+            padding: 20px;
         }
 
         .gallery-overlay-text h3 {
@@ -264,7 +267,7 @@
 
         .card-image {
             width: 100%;
-            height: 300px;
+            height: 350px;
             overflow: hidden;
             position: relative;
         }
@@ -394,7 +397,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.4);
+            background: rgba(0, 0, 0, 0.5);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -405,6 +408,7 @@
             color: white;
             text-align: center;
             max-width: 800px;
+            padding: 20px;
         }
 
         .full-width-text h2 {
@@ -422,7 +426,7 @@
         /* ===== GALERÍA MASÓNICA ===== */
         .masonry-gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 15px;
             margin-bottom: 80px;
         }
@@ -434,15 +438,11 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.15);
             cursor: pointer;
             transition: all 0.3s ease;
-            min-height: 200px;
+            min-height: 250px;
         }
 
         .masonry-item:nth-child(1) {
             grid-column: span 2;
-            grid-row: span 2;
-        }
-
-        .masonry-item:nth-child(4) {
             grid-row: span 2;
         }
 
@@ -468,22 +468,24 @@
             height: 100%;
             background: rgba(0,0,0,0.9);
             animation: fadeIn 0.3s ease;
+            align-items: center;
+            justify-content: center;
         }
 
         .modal-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            position: relative;
             max-width: 90vw;
             max-height: 90vh;
             animation: zoomIn 0.3s ease;
         }
 
         .modal-content img {
-            width: 100%;
-            height: auto;
+            max-width: 100%;
+            max-height: 85vh;
             border-radius: 10px;
+            object-fit: contain;
+            display: block;
+            margin: auto;
         }
 
         .close-modal {
@@ -508,8 +510,8 @@
         }
 
         @keyframes zoomIn {
-            from { transform: translate(-50%, -50%) scale(0.8); }
-            to { transform: translate(-50%, -50%) scale(1); }
+            from { transform: scale(0.8); }
+            to { transform: scale(1); }
         }
 
         /* ===== RESPONSIVE ===== */
@@ -538,12 +540,12 @@
             .timeline-item:nth-child(odd),
             .timeline-item:nth-child(even) {
                 text-align: left;
-                padding-left: 100px;
+                padding-left: 80px;
                 padding-right: 0;
             }
 
             .timeline-dot {
-                left: 20px;
+                left: 30px;
             }
 
             .full-width-section {
@@ -570,10 +572,6 @@
                 grid-column: span 1;
                 grid-row: span 1;
             }
-
-            .masonry-item:nth-child(4) {
-                grid-row: span 1;
-            }
         }
     </style>
 </head>
@@ -598,32 +596,32 @@
                 <p>Los instantes que harán eterno nuestro amor</p>
             </div>
             <div class="gallery">
-                <div class="gallery-card" onclick="openModal('https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=500&h=500&fit=crop')">
-                    <img src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=500&h=500&fit=crop" alt="Moment 1">
+                <div class="gallery-card" onclick="openModal('WhatsApp Image 2026-07-13 at 9.45.52 PM (4).jpeg')">
+                    <img src="WhatsApp Image 2026-07-13 at 9.45.52 PM (4).jpeg" alt="Paseando juntos">
                     <div class="gallery-overlay">
                         <div class="gallery-overlay-text">
-                            <h3>Nuestro Primer Encuentro</h3>
-                            <p>El día que todo cambió 💫</p>
+                            <h3>Caminando de la Mano</h3>
+                            <p>Donde sea, pero siempre juntos 💫</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="gallery-card" onclick="openModal('https://images.unsplash.com/photo-1516451453629-1b6b5b61e6f5?w=500&h=500&fit=crop')">
-                    <img src="https://images.unsplash.com/photo-1516451453629-1b6b5b61e6f5?w=500&h=500&fit=crop" alt="Moment 2">
+                <div class="gallery-card" onclick="openModal('WhatsApp Image 2026-07-13 at 9.45.52 PM (5).jpeg')">
+                    <img src="WhatsApp Image 2026-07-13 at 9.45.52 PM (5).jpeg" alt="Cita en el cine">
                     <div class="gallery-overlay">
                         <div class="gallery-overlay-text">
                             <h3>Tus Sonrisas</h3>
-                            <p>Mi razón de vivir 🌟</p>
+                            <p>Nuestras citas consentidas y mágicas 🎬</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="gallery-card" onclick="openModal('https://images.unsplash.com/photo-1527699820692-91c02b46e1ce?w=500&h=500&fit=crop')">
-                    <img src="https://images.unsplash.com/photo-1527699820692-91c02b46e1ce?w=500&h=500&fit=crop" alt="Moment 3">
+                <div class="gallery-card" onclick="openModal('WhatsApp Image 2026-07-13 at 9.45.52 PM (3).jpeg')">
+                    <img src="WhatsApp Image 2026-07-13 at 9.45.52 PM (3).jpeg" alt="Día de piscina">
                     <div class="gallery-overlay">
                         <div class="gallery-overlay-text">
                             <h3>Aventuras Juntos</h3>
-                            <p>Cada viaje es perfecto contigo 🌍</p>
+                            <p>Bajo el sol y rodeados de naturaleza 🌿</p>
                         </div>
                     </div>
                 </div>
@@ -640,34 +638,34 @@
             <div class="card-section">
                 <div class="card">
                     <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=400&h=300&fit=crop" alt="Story 1">
+                        <img src="WhatsApp Image 2026-07-13 at 9.45.50 PM (1).jpeg" alt="Concierto Feid">
                     </div>
                     <div class="card-content">
-                        <div class="card-title">Cuando Te Conocí</div>
-                        <div class="card-date">14 de Julio, 2024</div>
-                        <p class="card-text">Ese día especial cuando nuestras vidas cambiaron para siempre. Tu sonrisa iluminó mi mundo y supe que eras la persona indicada para compartir el resto de mi vida.</p>
+                        <div class="card-title">Nuestra Locura Verde</div>
+                        <div class="card-date">Conciertos Memorables</div>
+                        <p class="card-text">Pintarnos de verde, cantar a todo pulmón y disfrutar de la música abrazados. Cada show y cada canción se vuelven perfectos porque estás bailando a mi lado.</p>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=400&h=300&fit=crop" alt="Story 2">
+                        <img src="WhatsApp Image 2026-07-13 at 9.45.52 PM.jpeg" alt="Estilo Campestre">
                     </div>
                     <div class="card-content">
-                        <div class="card-title">Nuestras Aventuras</div>
-                        <div class="card-date">Cada día</div>
-                        <p class="card-text">Cada momento contigo es una aventura mágica. Desde los viajes más lejanos hasta los simples paseos de la mano, todo es especial porque estás tú.</p>
+                        <div class="card-title">Nuestras Tradiciones</div>
+                        <div class="card-date">Días de Pueblo</div>
+                        <p class="card-text">Lucir con orgullo nuestros sombreros tradicionales y ruanas, disfrutando de las caminatas por las calles rústicas. Amó compartir estas raíces y sonrisas tan nuestras contigo.</p>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1516451453629-1b6b5b61e6f5?w=400&h=300&fit=crop" alt="Story 3">
+                        <img src="WhatsApp Image 2026-07-13 at 9.45.51 PM.jpeg" alt="Cabalgata">
                     </div>
                     <div class="card-content">
-                        <div class="card-title">Para Siempre</div>
-                        <div class="card-date">Por la eternidad</div>
-                        <p class="card-text">No hay palabras suficientes para describir lo que significas para mí. Eres mi amor, mi inspiración, mi felicidad. Te amo hoy, mañana y por siempre.</p>
+                        <div class="card-title">Paseos Inolvidables</div>
+                        <div class="card-date">Cabalgata y Aventura</div>
+                        <p class="card-text">No hay nada mejor que recorrer caminos hermosos a caballo. Sentir la libertad del paisaje rural, reírnos de nuestras ocurrencias y saber que siempre cuidamos el uno del otro.</p>
                     </div>
                 </div>
             </div>
@@ -675,11 +673,11 @@
 
         <!-- ===== SECCIÓN 3: FULL WIDTH ===== -->
         <section class="section">
-            <div class="full-width-section" style="background-image: url('https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=1200&h=600&fit=crop');">
+            <div class="full-width-section" style="background-image: url('WhatsApp Image 2026-07-13 at 9.45.51 PM (1).jpeg');">
                 <div class="full-width-overlay">
                     <div class="full-width-text">
                         <h2>Eres Mi Todo 💕</h2>
-                        <p>En tus ojos encuentro el universo, en tu risa la música del cielo, y en tu corazón mi hogar. Te amo más cada día.</p>
+                        <p>En tus ojos encuentro mi paz, en tu risa la música más bonita, y en tus brazos el único lugar que llamo hogar. Te amo infinitamente.</p>
                     </div>
                 </div>
             </div>
@@ -697,24 +695,24 @@
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
-                            <h3>El Principio</h3>
-                            <p>Todo comenzó con una mirada. Fue amor a primera vista. Desde ese momento supe que eras especial.</p>
+                            <h3>Nuestros Inicios</h3>
+                            <p>Cada pequeña cita y salida marcó el principio de una hermosa complicidad. Esos paseos tranquilos donde nos dábamos cuenta de lo mucho que queríamos estar juntos.</p>
                         </div>
                     </div>
 
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
-                            <h3>Conocerte Mejor</h3>
-                            <p>Descubrí tu magia, tu bondad, tu hermosa alma. Cada conversación me enamoraba más de ti.</p>
+                            <h3>Citas y Noches de Fiesta</h3>
+                            <p>Bailar bajo las luces de neón, empaparnos de alegría en cada salida nocturna y atesorar esos momentos donde solo existimos tú y yo en medio de la multitud.</p>
                         </div>
                     </div>
 
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
-                            <h3>Nuestras Primeras Aventuras</h3>
-                            <p>Viajamos juntos, reímos juntos, vivimos momentos que nunca olvidaré. Eres mi compañera perfecta.</p>
+                            <h3>Compartiendo en Familia</h3>
+                            <p>Los picnics en el pasto, las tardes de sol rodeados de las personas que más queremos. Es hermoso ver cómo encajamos perfectamente en la vida del otro.</p>
                         </div>
                     </div>
 
@@ -722,7 +720,7 @@
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
                             <h3>Un Futuro Juntos</h3>
-                            <p>Contigo construyo mis sueños. El futuro es brillante porque estarás a mi lado. Te amo eternamente.</p>
+                            <p>Con gorras a juego y listos para cualquier evento o estadio, seguimos construyendo sueños. El futuro es brillante porque tengo a la mejor compañera a mi lado.</p>
                         </div>
                     </div>
                 </div>
@@ -737,20 +735,21 @@
                 <p>Imágenes que capturan nuestro amor</p>
             </div>
             <div class="masonry-gallery">
-                <div class="masonry-item" onclick="openModal('https://images.unsplash.com/photo-1535016120754-188fbb74d11d?w=400&h=400&fit=crop')">
-                    <img src="https://images.unsplash.com/photo-1535016120754-188fbb74d11d?w=400&h=400&fit=crop" alt="Emotion 1">
+                <!-- Imagen Principal Destacada -->
+                <div class="masonry-item" onclick="openModal('WhatsApp Image 2026-07-13 at 9.45.52 PM.jpeg')">
+                    <img src="WhatsApp Image 2026-07-13 at 9.45.52 PM.jpeg" alt="Estilo Campestre">
                 </div>
-                <div class="masonry-item" onclick="openModal('https://images.unsplash.com/photo-1516451453629-1b6b5b61e6f5?w=200&h=200&fit=crop')">
-                    <img src="https://images.unsplash.com/photo-1516451453629-1b6b5b61e6f5?w=200&h=200&fit=crop" alt="Emotion 2">
+                <div class="masonry-item" onclick="openModal('WhatsApp Image 2026-07-13 at 9.45.51 PM (2).jpeg')">
+                    <img src="WhatsApp Image 2026-07-13 at 9.45.51 PM (2).jpeg" alt="Noche de Fiesta">
                 </div>
-                <div class="masonry-item" onclick="openModal('https://images.unsplash.com/photo-1527699820692-91c02b46e1ce?w=200&h=200&fit=crop')">
-                    <img src="https://images.unsplash.com/photo-1527699820692-91c02b46e1ce?w=200&h=200&fit=crop" alt="Emotion 3">
+                <div class="masonry-item" onclick="openModal('WhatsApp Image 2026-07-13 at 9.45.52 PM (2).jpeg')">
+                    <img src="WhatsApp Image 2026-07-13 at 9.45.52 PM (2).jpeg" alt="En el Estadio">
                 </div>
-                <div class="masonry-item" onclick="openModal('https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=200&h=400&fit=crop')">
-                    <img src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=200&h=400&fit=crop" alt="Emotion 4">
+                <div class="masonry-item" onclick="openModal('WhatsApp Image 2026-07-13 at 9.45.51 PM.jpeg')">
+                    <img src="WhatsApp Image 2026-07-13 at 9.45.51 PM.jpeg" alt="Cabalgata">
                 </div>
-                <div class="masonry-item" onclick="openModal('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=200&h=200&fit=crop')">
-                    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=200&h=200&fit=crop" alt="Emotion 5">
+                <div class="masonry-item" onclick="openModal('WhatsApp Image 2026-07-13 at 9.45.52 PM (1).jpeg')">
+                    <img src="WhatsApp Image 2026-07-13 at 9.45.52 PM (1).jpeg" alt="Picnic Familiar">
                 </div>
             </div>
         </section>
@@ -758,10 +757,10 @@
         <!-- ===== SECCIÓN FINAL ===== -->
         <section class="section" style="text-align: center; padding: 60px 0;">
             <h2 style="font-size: 2.5em; color: #764ba2; margin-bottom: 20px;">
-                Te Amo <span class="heart-big">💕</span>
+                Te Amo <span class="heart-big" style="color: #f5576c;">💕</span>
             </h2>
             <p style="font-size: 1.3em; color: #666; max-width: 600px; margin: 0 auto; line-height: 1.8;">
-                Esta página es un pequeño reflejo de lo mucho que significas para mí. Cada imagen, cada palabra, cada emoji está cargado de todo mi amor. Gracias por ser mi razón de sonreír cada día.
+                Esta página es un pequeño reflejo de lo mucho que significas para mí. Cada imagen, cada palabra y cada risa compartida está guardada en mi corazón. Gracias por ser mi felicidad diaria.
             </p>
         </section>
     </div>
@@ -769,7 +768,9 @@
     <!-- MODAL -->
     <div id="imageModal" class="modal" onclick="closeModal()">
         <span class="close-modal" onclick="closeModal()">&times;</span>
-        <img class="modal-content" id="modalImage">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <img id="modalImage" src="" alt="Vista ampliada">
+        </div>
     </div>
 
     <script>
@@ -792,17 +793,6 @@
             if (event.key === 'Escape') {
                 closeModal();
             }
-        });
-
-        // Smooth scroll para navegación
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
         });
     </script>
 </body>
